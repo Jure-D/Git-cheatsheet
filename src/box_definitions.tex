@@ -1,0 +1,105 @@
+\definecolor{0orange}{RGB}{255,153,51}
+\definecolor{1yellow}{RGB}{255,255,0}
+\definecolor{2pink}{RGB}{255,102,255}
+\definecolor{3green}{RGB}{102,255,102}
+\definecolor{4blue}{RGB}{102,178,255}
+
+
+\RequirePackage[framemethod=default]{mdframed}
+\definecolor{infoshadecolor}{RGB}{174,214,241}
+\definecolor{infocolor}{RGB}{52,152,219}
+\definecolor{warningshadecolor}{RGB}{245,183,177}
+\definecolor{warningcolor}{RGB}{231,76,60}
+\definecolor{titleshadecolor}{RGB}{255,255,255}
+\definecolor{titlecolor}{RGB}{255,255,255}
+\definecolor{codeshadecolor}{RGB}{236, 239, 241}
+\definecolor{codecolor}{RGB}{176,190,197}
+\definecolor{textmyshadecolor}{RGB}{255,255,255}
+\definecolor{textmycolor}{RGB}{0,0,0}
+
+\newmdenv[
+    skipabove=0pt,
+    skipbelow=0pt,
+    rightline=false,
+    leftline=true,
+    topline=false,
+    bottomline=false,
+    % linecolor=infocolor,
+    backgroundcolor=infoshadecolor,
+    innerleftmargin=5pt,
+    innerrightmargin=5pt,
+    innertopmargin=5pt,
+    leftmargin=0cm,
+    rightmargin=0cm,
+    linewidth=4pt,
+    innerbottommargin=5pt
+]{infoBox}
+\newmdenv[
+    skipabove=0pt,
+    skipbelow=0pt,
+    rightline=false,
+    leftline=true,
+    topline=false,
+    bottomline=false,
+    % linecolor=warningcolor,
+    backgroundcolor=warningshadecolor,
+    innerleftmargin=5pt,
+    innerrightmargin=5pt,
+    innertopmargin=5pt,
+    leftmargin=0cm,
+    rightmargin=0cm,
+    linewidth=4pt,
+    innerbottommargin=5pt
+]{warningBox}
+\newmdenv[
+    skipabove=0pt,
+    skipbelow=0pt,
+    rightline=false,
+    leftline=true,
+    topline=false,
+    bottomline=false,
+    % linecolor=codecolor,
+    backgroundcolor=codeshadecolor,
+    innerleftmargin=5pt,
+    innerrightmargin=5pt,
+    innertopmargin=0pt,
+    leftmargin=0cm,
+    rightmargin=0cm,
+    linewidth=4pt,
+    innerbottommargin=0pt
+]{codeBox}
+\newmdenv[
+    skipabove=0pt,
+    skipbelow=0pt,
+    rightline=false,
+    leftline=true,
+    topline=false,
+    bottomline=false,
+    % linecolor=2pink,
+    backgroundcolor=textmyshadecolor,
+    innerleftmargin=5pt,
+    innerrightmargin=0pt,
+    innertopmargin=2pt,
+    leftmargin=0cm,
+    rightmargin=10pt,
+    linewidth=4pt,
+    innerbottommargin=2pt
+]{textBox}
+
+\newenvironment{infobox}[1][]{\begin{infoBox}[linecolor=#1]}{\end{infoBox}}
+\newenvironment{warnbox}[1][]{\begin{warningBox}[linecolor=#1]}{\end{warningBox}}
+% \newenvironment{titlebox}{\begin{titleBox}\begin{Large}\begin{bfseries}}{\end{bfseries}\end{Large}\end{titleBox}}
+\newenvironment{codebox}[1][]{\begin{codeBox}[linecolor=#1]}{\end{codeBox}}
+\newenvironment{textbox}[1][]{\begin{textBox}[linecolor=#1]}{\end{textBox}}
+
+\newcommand{\titlebox}[1]{
+    \vspace{3pt}
+    \begin{large}
+    \bfseries
+    #1
+    \end{large}
+}
+
+\newcommand{\standout}[1]{
+    \ul{#1}
+}
