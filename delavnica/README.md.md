@@ -3,8 +3,8 @@
 # Priprava
 ## 1. Install Git
 ## 2. Osnove
-![](/src/images/git-skica.png)
-![](/src/images/git-workflow.png)
+![](git-skica.png)
+![](git-workflow.png)
 
 
 # Ustvarjanje repozitorija
@@ -168,7 +168,7 @@ Preglej repozitorij na spletu, nato sinhroniziraj se spremembe v veji `veja-2`
 git push origin veja-2
 ```
 # Zdruzevanje vej
-![Slika branch](/src/images/git-1-branch.png)
+![Slika branch](git-1-branch.png)
 ## 1 Zdruzili bomo vejo `veja-2` v vejo `main`
 ```
 git checkout main
@@ -176,9 +176,9 @@ git merge veja-2
 git push origin main
 ```
 ## 2 Fast forward merge
-![Slika merge](/src/images/git-2-fast-forward.png)
+![Slika merge](git-2-fast-forward.png)
 ## 3 merge commit
-![Slika pred merge commit](/src/images/git-3-merge-commit.png)
+![Slika pred merge commit](git-3-merge-commit.png)
 ### 3.1 Naredi spremembe v veji `main`
 ```
 rm -r mapa_2
@@ -208,12 +208,12 @@ git checkout main
 git merge veja-2
 git push origin main
 ```
-![Slika merge commit rezultat](/src/images/git-2-merge-commit-result.png)
+![Slika merge commit rezultat](git-2-merge-commit-result.png)
 
 ## 4 Rebasing
 Stanje
 
-![Slika pred merge commit](/src/images/git-3-merge-commit.png)
+![Slika pred merge commit](git-3-merge-commit.png)
 
 ### 4.1 Spremembe v `main`
 ```
@@ -238,7 +238,7 @@ git rebase main
 
 Rezultat
 
-![Slika rebase rezultat](/src/images/git-4-rebase.png)
+![Slika rebase rezultat](git-4-rebase.png)
 
 
 # Nadaljevanje: delo z drugimi uporabniki
